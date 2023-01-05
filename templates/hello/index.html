@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Django Base</title>
+</head>
+
+<body>
+    <nav class="container my-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{% url 'index' %}">DJANGO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link disabled" href="#">Thanks</a>
+                </div>
+            </div>
+        </nav>
+    </nav>
+    <div class="container my-3">
+
+    {% block content %}
+    <div class="container my-3"><h1>Welcome to index page!</h1></div>
+    {% endblock %}
+    </div>
+
+    <div class="container my-3 fixed-bottom">
+        <footer class="text-center bg-light">
+            <div class="container">
+                <section class="mt-5">
+                    <div class="row text-center d-flex justify-content-center pt-3">
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="{% url 'index' %}" class="text-black">Home</a>
+                            </h6>
+                        </div>
+                </section>
+
+            </div>
+
+            <div class="text-center p-3" style="background-color: rgba(103, 100, 100, 0.2)">
+                © 2022 Copyright
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
